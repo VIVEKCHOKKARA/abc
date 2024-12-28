@@ -1,0 +1,35 @@
+<html lang="en">
+    <body>
+        <select id="selectcity">
+            <option value="select">select</option>
+            <option value="boroda">boroda</option>
+            <option value="mumbai">mumbai</option>
+            <option value="delhi">delhi</option>
+            <option value="abad">abad</option>
+        </select>
+        <span id="spanans"></span>
+
+        <script>
+            let selectcity = document.querySelector("#selectcity");
+            let spanans = document.querySelector("#spanans");
+
+            selectcity.addEventListener("change", () => {
+                let choice = selectcity.value;
+                spanans.innerHTML = choice;
+
+                if (choice == "mumbai") {
+                    document.body.style.backgroundColor = "red";
+                }
+                else if (choice == "boroda") {
+                    document.body.style.backgroundColor = "yellow";
+                }
+                else if (choice == "delhi") {
+                    document.body.style.backgroundColor = "green";
+                }
+                else if (choice == "abad") {
+                    document.body.style.backgroundColor = "blue";
+                }
+            });
+        </script>
+    </body>
+</html>
